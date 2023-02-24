@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <form [formGroup]="toDoForm" (ngSubmit)="handleSaveToDo()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Todo</mat-label>
+      <input formControlName="task" matInput placeholder="Create To-Do" value="">
+    </mat-form-field>
+    <button type="submit" class="add-button" mat-button color="accent">Add</button>
+  </form>
+</div>
+
+<app-list-component [refreshList]="refreshStatus"></app-list-component>
+

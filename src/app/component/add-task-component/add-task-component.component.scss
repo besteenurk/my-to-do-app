@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  .example-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .mat-mdc-button:not(:disabled) {
+    background-color: #037F8C;
+    color: white;
+  }
+
+}

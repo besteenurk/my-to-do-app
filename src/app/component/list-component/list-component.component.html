@@ -1,0 +1,23 @@
+<mat-list role="list" class="wrapper">
+  <div *ngFor="let datas of data; let i = index;">
+    <mat-card>
+      <mat-card-content>
+        <mat-list-item role="listitem">
+          <div class="card-wrapper">
+            <div class="list-wrapper">
+              <section class="example-section">
+                <mat-checkbox [checked]="datas.status" (change)="changeTaskStatus(datas.id,i, datas)"
+                              class="example-margin"></mat-checkbox>
+              </section>
+              {{datas.task}}
+            </div>
+            <button (click)="deleteTask(datas.id)" id="delete-task" mat-icon-button color="red"
+                    aria-label="delete task">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-list-item>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</mat-list>
