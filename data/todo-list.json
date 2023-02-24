@@ -8,7 +8,7 @@
     {
       "id": 2,
       "task": "Task 2",
-      "status": true
+      "status": false
     }
   ]
 }

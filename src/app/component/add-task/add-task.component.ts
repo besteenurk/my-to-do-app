@@ -1,15 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ListComponentService} from "../list-component/list-component.service";
+import {TaskListService} from "../task-list/task-list.service";
 import {FormControl, FormGroup} from '@angular/forms';
 import {AddTaskService} from "./add-task.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-add-task-component',
-  templateUrl: './add-task-component.component.html',
-  styleUrls: ['./add-task-component.component.scss']
+  selector: 'app-add-task',
+  templateUrl: './add-task.component.html',
+  styleUrls: ['./add-task.component.scss']
 })
-export class AddTaskComponentComponent implements OnInit {
+export class AddTaskComponent implements OnInit {
   refreshStatus: boolean | undefined;
   toDoForm = new FormGroup({
     task: new FormControl(''),
@@ -18,7 +18,7 @@ export class AddTaskComponentComponent implements OnInit {
 
   constructor(
     private addTaskService: AddTaskService,
-    private listComponentService: ListComponentService,
+    private listComponentService: TaskListService,
     private _snackBar: MatSnackBar
   ) {
   }

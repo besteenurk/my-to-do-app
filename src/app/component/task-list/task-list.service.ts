@@ -5,7 +5,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class ListComponentService {
+export class TaskListService {
 
   private readonly URL = 'http://localhost:3000/list';
   constructor(private http: HttpClient) { }

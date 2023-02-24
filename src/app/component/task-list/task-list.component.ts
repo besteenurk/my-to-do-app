@@ -1,23 +1,21 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Observable} from "rxjs";
-import {ListComponentService} from "./list-component.service";
+import {TaskListService} from "./task-list.service";
 import {List} from "./list";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {MatCheckboxChange} from "@angular/material/checkbox";
 
 @Component({
-  selector: 'app-list-component',
-  templateUrl: './list-component.component.html',
-  styleUrls: ['./list-component.component.scss']
+  selector: 'app-task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.scss']
 })
-export class ListComponentComponent implements OnInit, OnChanges {
+export class TaskListComponent implements OnInit, OnChanges {
   @Input() refreshList: boolean | undefined;
   @Input()
   data: List[] = [];
   durationInSeconds = 5;
 
   constructor(
-    private listComponentService: ListComponentService,
+    private listComponentService: TaskListService,
     private _snackBar: MatSnackBar
   ) {
   }
